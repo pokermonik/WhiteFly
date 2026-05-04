@@ -1,0 +1,13 @@
+pyproject.toml
+src/projekt_rekrutacyjny.egg-info/PKG-INFO
+src/projekt_rekrutacyjny.egg-info/SOURCES.txt
+src/projekt_rekrutacyjny.egg-info/dependency_links.txt
+src/projekt_rekrutacyjny.egg-info/requires.txt
+src/projekt_rekrutacyjny.egg-info/top_level.txt
+src/shared/__init__.py
+src/shared/database.py
+src/zad1/__init__.py
+src/zad1/app.py
+src/zad1/tasks.py
+src/zad2/__init__.py
+src/zad2/main.py
