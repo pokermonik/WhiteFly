@@ -14,6 +14,6 @@ EXPOSE 80
 
 CMD service redis-server start && \
     celery -A src.zad1.tasks worker --loglevel=info -P solo & \
-    python -m gunicorn --bind 127.0.0.1:5000 src.zad1.app:app & \
-    uvicorn src.zad2.main:app --host 127.0.0.1:8000 & \
+    gunicorn --bind 0.0.0.0:5000 src.zad1.app:app & \
+    uvicorn src.zad2.main:app --host 0.0.0.0 --port 8000 & \
     nginx -g "daemon off;"
