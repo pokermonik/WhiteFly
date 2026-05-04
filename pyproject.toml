@@ -12,5 +12,6 @@ dependencies = [
     "python-multipart",
     "jinja2",
     "celery",
-    "redis"
+    "redis",
+    "gunicorn"
 ]
