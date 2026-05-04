@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sync + zabezpieczenia</title>
+    <style>
+        .hidden-field { display: none !important; }
+    </style>
+</head>
+<body>
+    <h3>Zabezpieczony Formularz Rejestracji</h3>
+    <form method="post">
+        <input type="text" name="name" placeholder="Imię" required>
+        <br><br>
+        <input type="text" name="surname" placeholder="Nazwisko" required>
+        <br><br>
+
+        <!-- 1. Honeypot -->
+        <div class="hidden-field">
+            <input type="text" name="email_confirm">
+        </div>
+
+        <!-- 2. Time-lock -->
+        <input type="hidden" name="load_timestamp" value="{{ current_time }}">
+
+        <!-- 3. Dynamic Token -->
+        <input type="hidden" name="security_token" value="{{ token }}">
+
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>
